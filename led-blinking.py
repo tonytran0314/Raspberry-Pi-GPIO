@@ -7,6 +7,7 @@ import sleep from time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
+# define pins and sleep time (second)
 led = 21
 sleepTime = 1
 
