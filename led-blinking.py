@@ -11,6 +11,7 @@ GPIO.setwarnings(False)
 led = 21
 sleepTime = 1
 
+# set led pin as output pin
 GPIO.setup(led, GPIO.OUT)
 
 GPIO.output(led, False)
