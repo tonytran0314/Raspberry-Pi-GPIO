@@ -2,7 +2,7 @@
 
 # import libraries
 import RPi.GPIO as GPIO
-import sleep from time
+from time import sleep
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
