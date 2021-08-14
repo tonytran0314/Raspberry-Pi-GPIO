@@ -25,3 +25,6 @@ while True:
     #led off for 1 sec
     GPIO.output(led, False)
     sleep(sleepTime)
+    GPIO.output(led, True)
+    sleep(sleepTime)
+
