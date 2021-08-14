@@ -1,5 +1,6 @@
 #led blinking
 
+# import libraries
 import RPi.GPIO as GPIO
 import sleep from time
 
