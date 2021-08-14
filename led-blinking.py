@@ -27,10 +27,10 @@ try:
         GPIO.output(led, False)
         sleep(sleepTime)
        
-#except KeyboardInterrupt:  
+except KeyboardInterrupt:  
     # here you put any code you want to run before the program   
     # exits when you press CTRL+C  
-#    print("Hello")
+    print("The program has been stopped")
 
 finally:  
     GPIO.cleanup() # this ensures a clean exit  
