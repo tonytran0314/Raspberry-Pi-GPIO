@@ -18,19 +18,6 @@ GPIO.setup(led, GPIO.OUT)
 # Turn led off first
 GPIO.output(led, False)
 
-<<<<<<< HEAD
-# Loop that turn led on and off
-while True:
-    #led on for 1 sec
-    GPIO.output(led, True)
-    sleep(sleepTime)
-    #led off for 1 sec
-    GPIO.output(led, False)
-    sleep(sleepTime)
-    GPIO.output(led, True)
-    sleep(sleepTime)
-
-=======
 try: 
     while True:
         #led on for 1 sec
@@ -39,6 +26,7 @@ try:
         #led off for 1 sec
         GPIO.output(led, False)
         sleep(sleepTime)
+        
 except KeyboardInterrupt:  
     # here you put any code you want to run before the program   
     # exits when you press CTRL+C  
@@ -52,4 +40,3 @@ except:
   
 finally:  
     GPIO.cleanup() # this ensures a clean exit  
->>>>>>> f28c744f226b7bbf3dcf2a403051eb005ad6337e
