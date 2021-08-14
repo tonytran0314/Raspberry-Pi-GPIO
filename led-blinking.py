@@ -30,7 +30,7 @@ try:
 except KeyboardInterrupt:  
     # here you put any code you want to run before the program   
     # exits when you press CTRL+C  
-    print("The program has been stopped")
+    print("\nThe program has been stopped")
 
 finally:  
     GPIO.cleanup() # this ensures a clean exit  
