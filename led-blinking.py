@@ -26,17 +26,11 @@ try:
         #led off for 1 sec
         GPIO.output(led, False)
         sleep(sleepTime)
-        
+     '''   
 except KeyboardInterrupt:  
     # here you put any code you want to run before the program   
     # exits when you press CTRL+C  
     print("Hello")
-  
-except:  
-    # this catches ALL other exceptions including errors.  
-    # You won't get any error messages for debugging  
-    # so only use it once your code is working  
-    print ("Other error or exception occurred!")  
-  
+'''
 finally:  
     GPIO.cleanup() # this ensures a clean exit  
