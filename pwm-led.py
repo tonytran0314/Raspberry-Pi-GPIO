@@ -2,7 +2,7 @@
 
 # Import the GPIO and time libraries
 import RPi.GPIO as GPIO
-import 
+from time import sleep
 
 # Set the GPIO mode to BCM and disable warnings
 GPIO.setmode(GPIO.BCM)
