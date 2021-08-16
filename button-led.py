@@ -3,7 +3,7 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-GPIO.setmode(BCM)
+GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 btnPin = 20
