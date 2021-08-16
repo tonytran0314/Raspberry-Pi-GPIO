@@ -12,6 +12,7 @@ GPIO.setup(ledPin, GPIO.OUT)
 
 GPIO.output(ledPin, False)
 ledStatus = False
+btnVal = True
 
 try:
     while True:
