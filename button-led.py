@@ -1,7 +1,6 @@
 # press button to turn the led on
 
 import RPi.GPIO as GPIO
-from time import sleep
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -19,14 +18,14 @@ try:
         btnVal = GPIO.input(btnPin)
 
         if (ledStatus == False) and (btnVal == False):
-            ledStatus = True
             GPIO.output(ledPin, True)
+            ledStatus = True
         elif (ledStatus == True) and (btnVal == False):
-            ledStatus = False
             GPIO.output(ledPin, False)
+            ledStatus = False
 
 except KeyboardInterrupt:
     print("\nThe program has been stopped")
-    
+
 finally:
     GPIO.cleanup()
