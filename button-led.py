@@ -6,11 +6,12 @@ from time import sleep
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-btnPin = 6
+btnPin = 5
 ledPin = 22
 GPIO.setup(btnPin, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 GPIO.setup(ledPin, GPIO.OUT)
 
+GPIO.output(ledPin, False)
 ledStatus = False
 btnVal = True
 
@@ -22,7 +23,7 @@ try:
             GPIO.output(ledPin, True)
             print("LED ON")
             ledStatus = True
-            sleep(3)
+            sleep(0.5)
         elif (btnVal == False) and (ledStatus == True):
             GPIO.output(ledPin, False)
             print("LED OFF")
