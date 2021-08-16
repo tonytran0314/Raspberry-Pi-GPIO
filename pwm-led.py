@@ -17,30 +17,39 @@ pwm = GPIO.PWM(pwmPin,100)
 pwm.start(0)
 
 # Begin Loop
-while True:
-    count = 1
-    
-    # begin while loop to brighten LED
-    while count < 100:
-        # set duty cycle
-        pwm.ChangeDutyCycle(count)
+try:
+    while True:
+        count = 1
+        
+        # begin while loop to brighten LED
+        while count < 100:
+            # set duty cycle
+            pwm.ChangeDutyCycle(count)
 
-        # delay 1/100 of a second
-        time.sleep(0.01)
+            # delay 1/100 of a second
+            time.sleep(0.01)
 
-        # increment count
-        count = count + 1
+            # increment count
+            count = count + 1
 
-    # begin while loop to dim LED
-    while count > 1:
-        pwm.ChangeDutyCycle(count)
-        time.sleep(0.01)
+        # begin while loop to dim LED
+        while count > 1:
+            pwm.ChangeDutyCycle(count)
+            time.sleep(0.01)
 
-        # set duty cycle
-        pwm.ChangeDutyCycle(count)
+            # set duty cycle
+            pwm.ChangeDutyCycle(count)
 
-        # delay 1/100 of a second
-        time.sleep(0.01)
+            # delay 1/100 of a second
+            time.sleep(0.01)
 
-        # decrement count
-        count = count – 1
+            # decrement count
+            count = count – 1
+            
+except KeyboardInterrupt:  
+    # here you put any code you want to run before the program   
+    # exits when you press CTRL+C  
+    print("\nThe program has been stopped")
+
+finally:  
+    GPIO.cleanup() # this ensures a clean exit   
