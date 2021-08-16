@@ -2,7 +2,7 @@
 
 # Import the GPIO and time libraries
 import RPi.GPIO as GPIO
-from time import sleep
+import sleep
 
 # Set the GPIO mode to BCM and disable warnings
 GPIO.setmode(GPIO.BCM)
@@ -44,7 +44,7 @@ try:
             time.sleep(0.01)
 
             # decrement count
-            #count = count – 1
+            count = count – 1
 
 except KeyboardInterrupt:  
     # here you put any code you want to run before the program   
