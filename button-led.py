@@ -10,11 +10,12 @@ btnPin = 17
 GPIO.setup(btnPin, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
 try:
-    #while True:
-    btnVal = GPIO.input(btnPin)
+    while True:
+        btnVal = GPIO.input(btnPin)
 
-    if (btnVal == False):
-        print("Button pressed")
+        if (btnVal == False):
+            print("Button pressed")
+            exit()
 except KeyboardInterrupt:
     print("The program has been stopped")
 finally:
