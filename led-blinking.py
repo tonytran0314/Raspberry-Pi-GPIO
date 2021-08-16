@@ -33,4 +33,4 @@ except KeyboardInterrupt:
     print("\nThe program has been stopped")
 
 finally:  
-    GPIO.cleanup() # this ensures a clean exit  
+    GPIO.cleanup() # this ensures a clean exit   
