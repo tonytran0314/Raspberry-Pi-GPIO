@@ -18,15 +18,15 @@ try:
     while True:
         btnVal = GPIO.input(btnPin)
 
-        if (btnVal == False):
-            print("Button pressed")
-            if (ledStatus == False):
-                ledStatus = True
-                GPIO.output(ledPin, True)
-            else:
-                ledStatus = False
-                GPIO.output(ledPin, False)
+        if (ledStatus == False) and (btnVal == False):
+            ledStatus = True
+            GPIO.output(ledPin, True)
+        elif (ledStatus == True) and (btnVal == False):
+            ledStatus = False
+            GPIO.output(ledPin, False)
+
 except KeyboardInterrupt:
-    print("The program has been stopped")
+    print("\nThe program has been stopped")
+    
 finally:
     GPIO.cleanup()
