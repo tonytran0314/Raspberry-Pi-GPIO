@@ -44,7 +44,7 @@ try:
             time.sleep(0.01)
 
             # decrement count
-            count = count – 1
+            count = count - 1
 
 except KeyboardInterrupt:  
     # here you put any code you want to run before the program   
