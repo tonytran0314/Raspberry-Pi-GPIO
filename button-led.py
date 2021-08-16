@@ -9,8 +9,13 @@ GPIO.setwarnings(False)
 btnPin = 17
 GPIO.setup(btnPin, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
-while True:
+try:
+    #while True:
     btnVal = GPIO.input(btnPin)
 
     if (btnVal == False):
         print("Button pressed")
+except KeyboardInterrupt:
+    print("The program has been stopped")
+finally:
+    GPIO.cleanup()
