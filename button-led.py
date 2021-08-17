@@ -1,4 +1,4 @@
-# press button to turn the led on and off
+# press the button to turn the led on and off
 
 # import libraries
 import RPi.GPIO as GPIO
