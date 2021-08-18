@@ -19,6 +19,7 @@ pwm.start(0)
 # Begin Loop
 try:
     while True:
+        # brighteness value
         count = 1
         
         # begin while loop to brighten LED
